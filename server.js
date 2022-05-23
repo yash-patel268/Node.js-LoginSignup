@@ -10,7 +10,10 @@ const flash = require('express-flash')
 const session = require('express-session')
 
 const initializePassport = require('./passport-config')
-initializePassport(passport, email => { return users.find(user => user.email === email) })
+initializePassport(
+    passport, 
+    email => users.find(user => user.email === email) 
+)
 
 const users = []
 
