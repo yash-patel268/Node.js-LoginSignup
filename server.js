@@ -30,7 +30,7 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 app.get('/', (req, res) => {
-    res.render('index.ejs', {name: 'Kyle'})
+    res.render('index.ejs', {name: req.user.name})
 })
 
 app.get('/login', (req, res) => {
